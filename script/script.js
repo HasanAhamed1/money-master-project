@@ -19,16 +19,28 @@ document
     const getValue3 = parseFloat(clothesInputText);
 
     const inputTotal = document.getElementById("total-expenses");
-    inputTotal.innerText = parseFloat(getValue + getValue2 + getValue3);
-    const totalExpenses = inputTotal.innerText;
+    var total = getValue + getValue2 + getValue3;
+    if(total < incomeInputText){
+        inputTotal.innerText = parseFloat(total);
+        const totalExpenses = inputTotal.innerText;
+        const balanceAfterExpenses = document.getElementById("balance");
+        balance = substract(getIncomeValue , totalExpenses);
+        balanceAfterExpenses.innerText = parseFloat(balance);
 
-    const balanceAfterExpenses = document.getElementById("balance");
-    balance = getIncomeValue - totalExpenses;
-    balanceAfterExpenses.innerText = parseFloat(balance);
+        foodInput.value = "";
+        rentInput.value = "";
+        clothesInput.value = "";
+    }
+    else{
+        error_message.innerText = "Expense is much more than income !";
+        incomeInput.value = "";
+        foodInput.value = "";
+        rentInput.value = "";
+        clothesInput.value = "";
+    }
+    
 
-    foodInput.value = "";
-    rentInput.value = "";
-    clothesInput.value = "";
+    
   });
 
 document.getElementById("save-button").addEventListener("click", function () {
@@ -42,11 +54,18 @@ document.getElementById("save-button").addEventListener("click", function () {
 
   const savingAmount = document.getElementById("saving-amount");
   var saving_amount = getIncomeValue * ((getsavingValue * 1) / 100);
+  if(saving_amount<balance){
   savingAmount.innerText = parseFloat(saving_amount);
 
   const remainningAmount =  document.getElementById("remaining-amount");
-  remainningAmount.innerText = parseFloat(balance - saving_amount);
-  // foodInput.value = '';
-  // rentInput.value = '';
-  // clothesInput.value = '';
+  remainningAmount.innerText = parseFloat(substract(balance , saving_amount));
+  }
+  else{
+    error_message2.innerText = "Saving amount is larger than balance!";
+  }
 });
+function substract(first_amount,second_amount){
+    var amount = first_amount -second_amount;
+    return amount;
+}
+
