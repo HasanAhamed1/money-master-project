@@ -8,34 +8,53 @@
     <title>Money Saver</title>
 </head>
 <body>
-    <header class="container">
+    <header>
         <h1 class="font-sans text-4xl font-bold text-center text-cyan-600 my-10">Money Saver</h1>
     </header>
     <main>  
-        <section class="container">
-            <div class="flex grid-cols-2 mx-10 gap-16">
+        <section>
+            <div class="flex grid-cols-2 m-10 gap-16">
                 <div class="w-1/2">
                     <img src="image/Accounting2.png" alt="" srcset="">
                 </div>
                 <div class="w-1/2 bg-gray-100 grid justify-items-center">
                     <h3 class="text-xl font-bold text-center mt-10">Income</h3>
                     <div class="p-8 text-lg font-medium">
-                            <p>Income: <input id="input-income" class="border mb-6 bg-gray-300 h-10 w-52" type="text"></p>
-                            <h3 class="text-xl font-bold text-center mb-6">Expenses</h3>
-                            <p>Food: <input id="input-food" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
-                            <p>Rent: <input id="input-rent" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
-                            <p>Clothes: <input id="input-clothes" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
-                            <button id="calculate-button" class="border w-40 mb-6 bg-blue-400 text-gray-100 font-bold">Calculate</button>
+                        <table>
+                            <tr>
+                                <td class="pb-4 text-right"><p>Income:</p></td>
+                                <td class="pl-2"><input id="input-income" class="border mb-6 bg-gray-300 h-10 w-52 rounded-lg" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><h3 class="text-xl font-bold text-center mb-6">Expenses</h3></td>
+                            </tr>
+                            <tr>
+                                <td class="pb-4 text-right"><p>Food:</p></td>
+                                <td class="pl-2"><input id="input-food" class="border  mb-4 bg-gray-300 h-10 w-52 rounded-lg" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="pb-4 text-right"><p>Rent:</p></td>
+                                <td class="pl-2"><input id="input-rent" class="border  mb-4 bg-gray-300 h-10 w-52 rounded-lg" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td class="pb-4 text-right"><p>Clothes:</p></td>
+                                <td class="pl-2"><input id="input-clothes" class="border  mb-4 bg-gray-300 h-10 w-52 rounded-lg" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><div class="flex items-center justify-center "><button id="calculate-button" class="border w-40 h-10 font-serif mb-6 bg-blue-400 text-gray-100 font-bold rounded-lg px-px py-px">Calculate</button></div>
+                                </td>
+                            </tr>
+                        </table>
                             <h3 class="text-xl font-bold text-center mb-6">Total Expenses: <span id="total-expenses">0000</span></h3>
                             <h3 class="text-xl font-bold text-center mb-6">Balance: <span id="balance">0000</span></h3>
-                            <p>Save: <input id="input-save" class="mb-6 bg-gray-300 h-10 w-24" type="text"> % <button id="save-button" class="border w-32 bg-blue-400 text-gray-100 font-bold">Save</button></p>
+                            <p>Save: <input id="input-save" class="mb-6 bg-gray-300 h-10 w-24 " type="text"> % <button id="save-button" class="border w-32 bg-blue-400 text-gray-100 font-bold rounded-lg">Save</button></p>
                             <h3 class="text-xl font-bold text-center mb-6">Saving Amount: <span id="saving-amount">0000</span></h3>
-                            <h3 class="text-xl font-bold text-center mb-6">Remaining Balance: <span>0000</span></h3>
+                            <h3 class="text-xl font-bold text-center mb-6">Remaining Balance: <span id="remaining-amount">0000</span></h3>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
