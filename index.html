@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Money Saver</title>
+</head>
+<body>
+    <header class="container">
+        <h1 class="font-sans text-4xl font-bold text-center text-cyan-600 my-10">Money Saver</h1>
+    </header>
+    <main>  
+        <section class="container">
+            <div class="flex grid-cols-2 mx-10 gap-16">
+                <div class="w-1/2">
+                    <img src="image/Accounting2.png" alt="" srcset="">
+                </div>
+                <div class="w-1/2 bg-gray-100 grid justify-items-center">
+                    <h3 class="text-xl font-bold text-center mt-10">Income</h3>
+                    <div class="p-8 text-lg font-medium">
+                            <p>Income: <input id="input-income" class="border mb-6 bg-gray-300 h-10 w-52" type="text"></p>
+                            <h3 class="text-xl font-bold text-center mb-6">Expenses</h3>
+                            <p>Food: <input id="input-food" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
+                            <p>Rent: <input id="input-rent" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
+                            <p>Clothes: <input id="input-clothes" class="border  mb-4 bg-gray-300 h-10 w-52" type="text"></p>
+                            <button id="calculate-button" class="border w-40 mb-6 bg-blue-400 text-gray-100 font-bold">Calculate</button>
+                            <h3 class="text-xl font-bold text-center mb-6">Total Expenses: <span id="total-expenses">0000</span></h3>
+                            <h3 class="text-xl font-bold text-center mb-6">Balance: <span id="balance">0000</span></h3>
+                            <p>Save: <input id="input-save" class="mb-6 bg-gray-300 h-10 w-24" type="text"> % <button id="save-button" class="border w-32 bg-blue-400 text-gray-100 font-bold">Save</button></p>
+                            <h3 class="text-xl font-bold text-center mb-6">Saving Amount: <span id="saving-amount">0000</span></h3>
+                            <h3 class="text-xl font-bold text-center mb-6">Remaining Balance: <span>0000</span></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
